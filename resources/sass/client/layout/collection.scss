@@ -1,0 +1,27 @@
+.section-teaser {
+  @extend .post-teaser;
+
+  .teaser__title {
+    @apply uppercase tracking-widest font-bold text-center;
+  }
+
+  .teaser__description {
+    @apply text-center;
+  }
+
+  &:hover {
+    .title span {
+      color: #fff;
+    }
+  }
+}
+
+.exhibition-teaser {
+  @extend .post-teaser;
+
+  &:hover {
+    .title span {
+      color: #fff;
+    }
+  }
+}
