@@ -1,13 +1,18 @@
 <header class="app-header">
     <div class="logo self-start h-full">
         <a href="{{ url('/') }}" class="block h-full">
-            <svg fill="#333" class="h-full">
+            <svg fill="#fff" width="240" height="60">
                 <use xlink:href="#logo"></use>
             </svg>
         </a>
     </div>
 
-    <nav class="px-6 flex-1">
+    <nav class="px-6 flex-1 app-nav">
+        <a href="#" class="app-nav__close" data-close-nav>
+            <svg width="24" height="24" class="fill-current">
+                <use xlink:href="#close"></use>
+            </svg>
+        </a>
         <ul class="nav list-reset -mx-4">
             @foreach(app('nav')->header() as $nav)
                 @if(!isset($nav->published)|| ($nav->published && ( $nav->published == 1)) )
@@ -17,7 +22,7 @@
                         </a>
 
                         @if (isset($nav->children) && count($nav->children))
-                            <svg width="12" height="11" class="fill-current ml-2 -mt-px">
+                            <svg width="12" height="11" class="fill-current ml-2 -mt-px inline-flex">
                                 <use xlink:href="#caret"></use>
                             </svg>
 
@@ -44,7 +49,7 @@
         </ul>
     </nav>
 
-    <div class="w-40 flex items-center">
+    <div class="w-40 flex items-center ml-auto">
         <div class="language-switcher px-3 ml-auto">
             {{ app()->getLocale() }}
 
@@ -67,6 +72,13 @@
             <a href="#" data-show-search>
                 <svg width="24" height="24" class="fill-current">
                     <use xlink:href="#search"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="toggle-nav ml-4">
+            <a href="#" data-toggle-nav>
+                <svg width="24" height="24" class="fill-current">
+                    <use xlink:href="#nav"></use>
                 </svg>
             </a>
         </div>

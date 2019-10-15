@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/client.css') }}">
     @stack('styles')
 </head>
-<body class="overflow-x-hidden">
+<body>
 @include('partials.client.layout.icons')
 
 <div id="app" class="flex flex-col min-h-screen">

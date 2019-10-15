@@ -17,6 +17,12 @@ return [
         'date' => 'Spending time',
         'place' => 'Location'
     ],
+    'question' =>[
+        'btn' => 'Ask a question',
+    ],
+    'contacts' =>[
+        'btn' => 'Contact us',
+    ],
     'not_found' => [
         'message' => 'Nothing found...',
         'home' => 'Back to home'

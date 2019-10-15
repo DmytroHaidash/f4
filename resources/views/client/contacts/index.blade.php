@@ -38,6 +38,14 @@
                 </article>
             @endforeach
         </div>
+
+        <div class="text-center mt-8">
+            <button class="button button--primary modal-btn " data-modal-open="question">
+                @lang('pages.contacts.btn')
+            </button>
+        </div>
+        @include('client.contacts.modal')
+
     </section>
 
 @endsection

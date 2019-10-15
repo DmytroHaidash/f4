@@ -20,4 +20,12 @@ module.exports = ($) => {
       $submenu.fadeOut();
     }
   });
+
+  $('[data-toggle-nav]').on('click', function() {
+    $('.app-nav').fadeIn().css({display: 'flex'});
+  });
+
+  $('[data-close-nav]').on('click', function() {
+    $('.app-nav').fadeOut();
+  })
 };
