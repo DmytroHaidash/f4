@@ -26,5 +26,12 @@ return [
     'not_found' => [
         'message' => 'Nothing found...',
         'home' => 'Back to home'
+    ],
+    'book' => [
+        'btn' => 'Buy a book',
+        'name' => 'Your name',
+        'contact' => 'E-mail',
+        'message' => 'Question?',
+        'buy' => 'Buy',
     ]
 ];

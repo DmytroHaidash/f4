@@ -1,4 +1,4 @@
-<h4>Вопрос эксперту:</h4>
+<h4>Вопрос вязаться:</h4>
 <p>Имя:{{ $data->user->name }}</p>,
 <p>Телефон: {{ $data->user->phone }}</p>
 <p>E-mail: {{ $data->user->email }}</p>

@@ -7,11 +7,10 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class Feedback extends Mailable
+class Order extends Mailable
 {
     use Queueable, SerializesModels;
     public $data;
-
     /**
      * Create a new message instance.
      *
@@ -19,7 +18,7 @@ class Feedback extends Mailable
      */
     public function __construct($data)
     {
-        $this->data = (object)$data;
+        $this->data = $data;
     }
 
     /**
@@ -31,7 +30,7 @@ class Feedback extends Mailable
     {
         return $this
             ->to(config('app.admin_email'))
-            ->subject('Связаться с нами')
-            ->view('mail.contacts');
+            ->subject('Заказ на книгу')
+            ->view('mail.order');
     }
 }

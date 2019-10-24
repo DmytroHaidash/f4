@@ -151,11 +151,11 @@ class Navigation
                 'route' => 'sections',
                 'icon' => 'i-structure',
             ]),
-            new NavItem([
+          /*  new NavItem([
                 'name' => 'Авторы',
                 'route' => 'authors',
                 'icon' => 'i-users',
-            ]),
+            ]),*/
             new Delimiter(),
             new NavItem([
                 'name' => 'Пресс-центр',
@@ -167,7 +167,7 @@ class Navigation
                 'route' => 'categories',
                 'icon' => 'i-bullet-list',
             ]),
-            new Delimiter(),
+            /*new Delimiter(),
             new NavItem([
                 'name' => 'Выставки',
                 'route' => 'exhibitions',
@@ -182,7 +182,7 @@ class Navigation
                 'name' => 'Места проведения',
                 'route' => 'places',
                 'icon' => 'i-flag',
-            ]),
+            ]),*/
             new Delimiter(),
             new NavItem([
                 'name' => 'Контакты',

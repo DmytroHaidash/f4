@@ -2,8 +2,14 @@
 
 return [
 	'name' => 'Your name',
-	'contact' => 'У-mail',
-	'message' => 'Question?',
+	'contact' => 'E-mail',
+    'email' => 'E-mail',
+    'phone'=> 'Phone',
+    'message' => [
+        'order' => 'Message <small class="text-muted">(not necessary)</small>',
+        'question' => 'Question?'
+    ],
+
 
 	'buttons' => [
 		'buy' => 'Buy',

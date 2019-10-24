@@ -23,7 +23,7 @@ class ContactsController extends Controller
     public function feedback(Request $request): RedirectResponse
     {
         $data = [
-            'user' => (object)$request->only('name', 'contact'),
+            'user' => (object)$request->only('name', 'phone', 'email'),
             'message' => $request->input('message'),
         ];
         Mail::send(new Feedback($data));

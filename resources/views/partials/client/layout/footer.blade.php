@@ -1,4 +1,4 @@
-<footer class="pt-10 pb-4">
+<footer class="pt-10 pb-4 overflow-hidden">
     <div class="container">
         <div class="text-center">
             <a href="{{ url('/') }}" class="inline-flex">

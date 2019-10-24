@@ -22,18 +22,28 @@
         </div>
 
         <div class="mb-5">
-            <label for="contact" class="block font-bold uppercase text-xs mb-2">@lang('forms.contact')</label>
-            <input type="text" class="form-control @error('nacontactme') border-red @enderror" id="contact" name="contact"
-                   value="{{ old('contact') }}" required>
-            @if($errors->has('contact'))
-                <div class="mt-1 text-danger">
-                    {{ $errors->first('contact') }}
-                </div>
-            @endif
+            <label for="phone" class="block font-bold uppercase text-xs mb-2">@lang('forms.phone')</label>
+            <input type="tel" class="form-control @error('phone') border-red @enderror" id="phone" name="phone"
+                   value="{{ old('phone') }}" required>
+            @error('contact')
+            <div class="text-red" role="alert">
+                <strong>{{ $errors->first('phone') }}</strong>
+            </div>
+            @enderror
+        </div>
+        <div class="mb-5">
+            <label for="email" class="block font-bold uppercase text-xs mb-2">@lang('forms.email')</label>
+            <input type="email" class="form-control @error('email') border-red @enderror" id="email" name="email"
+                   value="{{ old('email') }}" required>
+            @error('contact')
+            <div class="text-red" role="alert">
+                <strong>{{ $errors->first('email') }}</strong>
+            </div>
+            @enderror
         </div>
 
         <div class="mb-5">
-            <label for="message" class="block font-bold uppercase text-xs mb-2">@lang('forms.message.question')</label>
+            <label for="message" class="block font-bold uppercase text-xs mb-2">@lang('forms.message.order')</label>
             <textarea class="form-control border" id="message"
                       name="message">{{ old('message') }}</textarea>
         </div>

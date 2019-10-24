@@ -1,4 +1,4 @@
-<div class="custom-modal" id="question">
+<div class="custom-modal" id="book-buy">
 
     <div class="custom-modal--close">
         <svg width="24" height="24" class="fill-current">
@@ -6,12 +6,12 @@
         </svg>
     </div>
 
-    <h5 class="text-2xl text-center mb-5">@lang('pages.question.btn') </h5>
-    <form action="{{route('client.question')}}" method="post">
+    <h5 class="text-2xl text-center mb-5">@lang('pages.book.btn') </h5>
+    <form action="{{route('client.order')}}" method="post">
         @csrf
 
         <div class="mb-5">
-            <label for="name" class="block font-bold uppercase text-xs mb-2">@lang('forms.name')</label>
+            <label for="name" class="block font-bold uppercase text-xs mb-2">@lang('pages.book.name')</label>
             <input type="text" class="form-control @error('name') border-red @enderror" id="name" name="name"
                    value="{{ old('name') }}" required>
             @error('name')
@@ -41,13 +41,8 @@
             </div>
             @enderror
         </div>
-        <div class="mb-5">
-            <label for="message" class="block font-bold uppercase text-xs mb-2">@lang('forms.message.question')</label>
-            <textarea class="form-control border" id="message"
-                      name="message">{{ old('message') }}</textarea>
-        </div>
 
-        <button class="button button--primary">@lang('forms.buttons.question')</button>
+        <button class="button button--primary">@lang('pages.book.buy')</button>
     </form>
 </div>
 

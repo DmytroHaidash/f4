@@ -1,5 +1,5 @@
 .app-nav {
-  @apply fixed inset-0 bg-purple-900 flex flex-col justify-center overflow-y-auto z-50;
+  @apply fixed inset-0 bg-white text-black flex flex-col justify-center overflow-y-auto z-50;
   display: none;
 
   &__close {
@@ -55,9 +55,9 @@
   }
 
   .submenu {
-    @apply relative w-full;
+    @apply relative w-full ;
     @screen lg {
-      @apply absolute w-48 -ml-24 text-sm bg-purple-900;
+      @apply absolute w-48 -ml-24 text-sm bg-white text-black;
       top: 0;
       left: 50%;
       padding-top: 30px;

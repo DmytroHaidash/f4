@@ -45,4 +45,5 @@ Route::group([
     Route::get('{page}/{subpage?}', 'PagesController@show')
         ->where('page', '(about|book|expertise)');
     Route::post('/question', 'PagesController@question')->name('question');
+    Route::post('/order', 'PagesController@order')->name('order');
 });

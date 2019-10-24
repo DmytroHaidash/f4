@@ -1,16 +1,16 @@
-<section class="slideshow">
-   {{-- <div class="max-w-lg text-white z-30" id="intro" style="display: none">
-        <img src="{{ asset('images/feldman.png') }}" alt="">
+<section class="slideshow hidden lg:block">
+    {{-- <div class="max-w-lg text-white z-30" id="intro" style="display: none">
+         <img src="{{ asset('images/feldman.png') }}" alt="">
 
-        <a href="{{ url('/alexandr-feldman') }}">
-            <h1 class="text-4xl leading-none mb-4">{{ __('nav.about') }}</h1>
-            <blockquote class="font-serif italic text-xl leading-tight">{{ __('common.intro.quote') }}</blockquote>
-        </a>
+         <a href="{{ url('/alexandr-feldman') }}">
+             <h1 class="text-4xl leading-none mb-4">{{ __('nav.about') }}</h1>
+             <blockquote class="font-serif italic text-xl leading-tight">{{ __('common.intro.quote') }}</blockquote>
+         </a>
 
-        <svg width="20" height="20" fill="#fff" class="close cursor-pointer absolute top-0 right-0 m-4">
-            <use xlink:href="#close"></use>
-        </svg>
-    </div>--}}
+         <svg width="20" height="20" fill="#fff" class="close cursor-pointer absolute top-0 right-0 m-4">
+             <use xlink:href="#close"></use>
+         </svg>
+     </div>--}}
 
     <div class="slides slides--images">
         <div class="slide slide--current">
@@ -35,7 +35,7 @@
 
                 <h2 class="slide__title font-heading">{{ $section->title }}</h2>
                 @if ($section->hasTranslation('description'))
-                <p class="slide__desc text-white" >{{ $section->description }}</p>
+                    <p class="slide__desc text-white">{{ $section->description }}</p>
                 @endif
                 <div class="slide__link mt-6">
                     <a href="{{ route('client.collection.index', $section) }}" class="button button--primary">
@@ -58,4 +58,23 @@
             </svg>
         </button>
     </nav>
+</section>
+<section class="slideshow block  lg:hidden">
+    <div class="slides slides--images">
+        <div class="slide slide--current">
+            <figure class="slide__img" style="background-image: url({{ asset('images/bg-mobile.jpg') }});"></figure>
+            <div class="slide__title">
+                <svg fill="#fff" class="slide__title-logo">
+                    <use xlink:href="#logo2"></use>
+                </svg>
+            </div>
+            <div class="slide__desc" hidden></div>
+            <div class="slide__link mt-6">
+                <a href="{{ url('/about')}}" class="button button--primary">
+                    {{ __('nav.about') }}
+                </a>
+            </div>
+        </div>
+    </div>
+
 </section>

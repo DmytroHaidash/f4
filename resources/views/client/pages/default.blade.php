@@ -15,9 +15,15 @@
                     @lang('pages.question.btn')
                 </button>
             </div>
-        @endif
-        @if($page->slug == 'expertise')
             @include('client.pages.question-modal')
+        @endif
+        @if($page->slug =='book')
+            <div class="text-center mt-8">
+                <button class="button button--primary modal-btn " data-modal-open="book-buy">
+                    @lang('pages.book.btn')
+                </button>
+            </div>
+            @include('client.pages.buy-modal')
         @endif
     </section>
 

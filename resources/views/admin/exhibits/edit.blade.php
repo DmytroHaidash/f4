@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="form-group">
+                    {{--<div class="form-group">
                         <label for="author">Автор <small>(не обязательно)</small></label>
                         <select name="author_id" id="author" class="form-control">
                             <option value="">Не задан</option>
@@ -54,7 +54,7 @@
                                 </option>
                             @endforeach
                         </select>
-                    </div>
+                    </div>--}}
 
                     <div class="form-group">
                         <label for="section">Категория</label>

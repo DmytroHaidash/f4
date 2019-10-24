@@ -22,9 +22,11 @@
                         </a>
 
                         @if (isset($nav->children) && count($nav->children))
-                            <svg width="12" height="11" class="fill-current ml-2 -mt-px inline-flex">
-                                <use xlink:href="#caret"></use>
-                            </svg>
+                            <a href="{{ $nav->link ?? '#' }}" class="font-bold uppercase tracking-widest">
+                                <svg width="12" height="11" class="fill-current ml-2 -mt-px inline-flex">
+                                    <use xlink:href="#caret"></use>
+                                </svg>
+                            </a>
 
                             <div class="submenu leading-tight" style="display: none">
                                 <ul class="list-reset">
