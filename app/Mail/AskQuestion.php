@@ -18,7 +18,6 @@ class AskQuestion extends Mailable
      */
     public function __construct($data)
     {
-        dd($data);
         $this->data = (object)$data;
     }
 
