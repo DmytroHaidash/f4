@@ -27,7 +27,7 @@ return [
     */
 
     'env' => env('APP_ENV', 'production'),
-    'admin_email' => env('ADMIN_EMAIL', ''),
+    'admin_email' => env('ADMIN_EMAIL', 'topdagger@gmail.com'),
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
