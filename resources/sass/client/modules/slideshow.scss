@@ -1,9 +1,12 @@
 .slideshow {
   width: 100%;
-  height: 100vh;
-  min-height: 480px;
+  padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+
+  @screen xl {
+    padding-top: 48%;
+  }
 }
 
 #intro {
@@ -19,9 +22,11 @@
 }
 
 .slides {
-  position: absolute;
+  position: absolute !important;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .slide {
@@ -47,10 +52,10 @@
 
 .slide__img {
   position: absolute;
-  top: -100px;
-  left: -100px;
-  width: calc(100% + 200px);
-  height: calc(100% + 200px);
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
   background-size: cover;
   background-position: 50% 50%;
 
@@ -76,16 +81,15 @@
   background: none;
   font-weight: bold;
   color: #fff;
-  svg{
-  fill: #fff;
+  svg {
+    fill: #fff;
   }
-  &--next{
-    svg {
-      transform: rotate(180deg)
-    }
-  }
+  &--next {
+  transform: rotate(180deg);
+}
+
   &:hover {
-    color: theme('colors.yellow.500');
+    color: theme('colors.purple.900');
   }
 }
 
@@ -93,7 +97,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  fill: theme('colors.yellow.500');
+  fill: theme('colors.purple.900');
   top: 0;
   pointer-events: none;
 }
@@ -109,8 +113,8 @@
     height: 150px;
 
     @screen md {
-      width: 720px;
-      height: 360px;
+      width: 480px;
+      height: 240px;
     }
   }
 
@@ -120,8 +124,8 @@
 }
 
 .slide__desc {
-  @apply relative font-serif text-2xl max-w-3xl leading-tight;
-  text-shadow: 0 1px 0 rgba(#fff, 0.8), 0 2px 12px #fff, 0 3px 24px #fff;
+  @apply relative font-serif text-2xl italic max-w-3xl leading-tight;
+  text-shadow: 0 1px 0 rgba(#1a202c, 0.8), 0 2px 12px #1a202c, 0 3px 24px #1a202c;
   //font-size: 1.5em;
   //margin: 0 0 2em 0;
   //cursor: default;

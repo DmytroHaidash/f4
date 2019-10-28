@@ -31,7 +31,7 @@ class Feedback extends Mailable
     {
         return $this
             ->to(config('app.admin_email'))
-            ->subject('Связаться с нами')
+            ->subject('Новое сообщение')
             ->view('mail.contacts');
     }
 }

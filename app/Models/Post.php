@@ -55,6 +55,7 @@ class Post extends Model implements HasMedia
         'title',
         'description',
         'body',
+        'video',
         'published',
         'published_at'
     ];

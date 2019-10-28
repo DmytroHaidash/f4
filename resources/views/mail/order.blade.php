@@ -1,4 +1,4 @@
-<h4>Заказ на книгу:</h4>
+<h4>Заказ книги:</h4>
 <p>Имя:{{ $data->user->name }}</p>
 <p>email:{{ $data->user->email }}</p>
 <p>Телефон:{{ $data->user->phone }}</p>

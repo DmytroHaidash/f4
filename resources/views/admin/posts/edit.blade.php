@@ -31,6 +31,7 @@
                                               rows="4">{{ old($lang.'.description') ?? $post->getTranslation('description', $lang) }}</textarea>
                                 </div>
 
+
                                 <wysiwyg label="Текст записи" name="{{$lang}}[body]"
                                          content="{{ old($lang.'.body') ?? $post->getTranslation('body', $lang) }}"
                                          class="mb-0"></wysiwyg>
@@ -76,7 +77,12 @@
                             @endforeach
                         </ul>
                     </div>
-
+                    <div class="form-group">
+                        <label for="video" class="mt-2">Видео</label>
+                        <input id="video" type="text" name="video"
+                               class="form-control"
+                               value="{{ old('video') ?? $post->video }}">
+                    </div>
                     <div class="form-group">
                         <label for="published_at">Дата публикации</label>
                         <input type="datetime-local" class="form-control" name="published_at" id="published_at"

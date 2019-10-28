@@ -3,7 +3,7 @@
 return [
     'home' => 'Главная',
     'about' => 'О проекте',
-    'collection' => 'Колекция',
+    'collection' => 'Коллекция',
     'publications' => 'Публикации',
     'blog' => 'Блог',
     'projects' => 'Наши проекты',

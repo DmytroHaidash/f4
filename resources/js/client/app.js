@@ -4,10 +4,10 @@ window.$ = window.jQuery = jQuery;
 
 const observer = require('lozad')();
 observer.observe();
-require('./modules/modal')
-require('./modules/modal')
+require('./modules/modal');
 require('./modules/slider');
 require('./modules/masonry');
+require('./modules/youtube');
 
 (function ($) {
   require('./modules/nav')($);

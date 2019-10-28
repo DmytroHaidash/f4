@@ -30,7 +30,7 @@ class AskQuestion extends Mailable
     {
         return $this
             ->to(config('app.admin_email'))
-            ->subject('Вопрос экспертизе и оценке')
+            ->subject('Вопрос  по кспертизе и оценке')
             ->view('mail.question');
     }
 }
