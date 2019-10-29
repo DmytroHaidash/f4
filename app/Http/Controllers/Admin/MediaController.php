@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ImageResource;
+use App\Http\Resources\MediaResource;
 use App\Models\Upload;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -22,7 +23,7 @@ class MediaController extends Controller
     }
 
     /**
-     * @param  Request  $request
+     * @param  Request $request
      * @return JsonResponse
      */
     public function upload(Request $request): JsonResponse
@@ -36,5 +37,22 @@ class MediaController extends Controller
         }
 
         return response()->json($media ? new ImageResource($media) : null);
+    }
+
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function wysiwyg(Request $request)
+    {
+        $media = null;
+        if ($request->hasFile('img')) {
+            /** @var Upload $media */
+            $media = Upload::create();
+            $media->addMediaFromRequest('img')
+                ->usingFileName(makeFileName($request->file('img')))
+                ->toMediaCollection('uploads');
+        }
+        return response()->json(['image' => $media ? new MediaResource($media->getFirstMedia('uploads')) : null,]);
     }
 }

@@ -34,6 +34,7 @@ Route::group([
         Route::get('browser', 'MediaController@all');
         Route::post('browser', 'MediaController@upload');
         Route::post('upload', 'UploadsController@store')->name('store');
+        Route::post('wysiwyg', 'MediaController@wysiwyg')->name('wysiwyg');
         Route::delete('{media}', 'UploadsController@destroy')->name('destroy');
     });
 
