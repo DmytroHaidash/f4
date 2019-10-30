@@ -3,7 +3,7 @@
         <div class="text-center">
             <a href="{{ url('/') }}" class="inline-flex">
                 <svg fill="#fff" width="240" height="120">
-                    <use xlink:href="#logo"></use>
+                    <use xlink:href="#logo-footer"></use>
                 </svg>
             </a>
         </div>
