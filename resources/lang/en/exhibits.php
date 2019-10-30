@@ -4,9 +4,9 @@ return [
     'props' => [
         'number' => 'Number',
         'origin' => 'Origin',
-        'time' => 'Time',
+        'time' => 'Period',
         'technique' => 'Technique',
-        'material' => 'Material',
+        'material' => 'Materials',
         'dimensions' => 'Dimensions'
     ]
 ];
