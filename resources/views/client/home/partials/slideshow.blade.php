@@ -59,22 +59,8 @@
         </button>
     </nav>
 </section>
-<section class="slideshow block  lg:hidden">
-    <div class="slides slides--images">
-        <div class="slide slide--current">
-            <figure class="slide__img" style="background-image: url({{ asset('images/bg-mobile.jpg') }});"></figure>
-            <div class="slide__title">
-                <svg fill="#fff" class="slide__title-logo">
-                    <use xlink:href="#logo2"></use>
-                </svg>
-            </div>
-            <div class="slide__desc" hidden></div>
-            <div class="slide__link mt-6">
-                <a href="{{ url('/about')}}" class="button button--primary">
-                    {{ __('nav.about') }}
-                </a>
-            </div>
-        </div>
-    </div>
-
-</section>
+<div class="mobile-top" style="background-image: url({{ asset('images/bg-mobile.jpg') }});">
+    <svg fill="#fff" class="mobile-top__logo">
+        <use xlink:href="#logo2"></use>
+    </svg>
+</div>

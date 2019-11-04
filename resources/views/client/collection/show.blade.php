@@ -35,7 +35,7 @@
 
     <section class="page-content">
         @if ($exhibit->hasTranslation('body'))
-            <div class="text-2xl font-serif italic max-w-3xl mx-auto mt-4">
+            <div class="text-2xl font-serif italic max-w-3xl mx-auto mt-4 ml-3">
                 {!! $exhibit->body !!}
             </div>
         @endif

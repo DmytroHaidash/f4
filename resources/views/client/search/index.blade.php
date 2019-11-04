@@ -2,14 +2,14 @@
 
 @section('content')
 
-    <section class="mt-32 mb-12 container">
+    <section class="mt-32 mb-12 container text-center">
         <h1 class="text-5xl font-thin leading-none text-center font-heading">
             <span>{{ __('common.header.search') }}: &laquo;{{ $query }}&raquo;</span>
         </h1>
     </section>
 
     <section class="my-12">
-        <div class="exhibits grid">
+        <div class="exhibits {{ $exhibits->count() ? 'grid' : '' }}">
             @each('partials.client.exhibits.teaser', $exhibits, 'exhibit', 'partials.client.layout.not-found')
         </div>
 

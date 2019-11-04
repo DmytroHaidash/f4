@@ -86,11 +86,9 @@
         </div>
     </div>
 
-    <form action="{{ route('client.search.index') }}" method="post"
-          class="search-panel absolute inset-x-0 top-0 flex items-center p-4 bg-gray-900"
+    <form action="{{ route('client.search.index') }}" method="get"
+          class="search-panel absolute inset-x-0 top-0 flex items-center p-4 bg-gray-900 z-50"
           style="display: none">
-        @csrf
-
         <input type="search" name="search" class="form-control text-lg h-12" autocomplete="nope"
                placeholder="{{ __('common.header.search') }}"
                value="{{ old('search') ?? $query ?? null }}">

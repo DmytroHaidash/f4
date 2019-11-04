@@ -37,9 +37,9 @@ Route::group([
         Route::get('/', 'ContactsController@index')->name('index');
     });
 
-    Route::post('search', 'SearchController@index')->name('search.index');
+    Route::get('search', 'SearchController@index')->name('search.index');
 
-    Route::get('{locale?}', 'LocalesController')
+    Route::get('{locale}', 'LocalesController')
         ->where('locale', '('.implode('|', config('app.locales')).')');
 
     Route::get('{page}/{subpage?}', 'PagesController@show')

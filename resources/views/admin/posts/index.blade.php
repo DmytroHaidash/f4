@@ -5,12 +5,15 @@
     <section>
         <form class="row mb-4">
             <div class="col pr-0">
-                <input type="search" name="q" class="form-control" placeholder="Заголовок записи">
+                <input type="search" name="q" class="form-control" placeholder="Заголовок записи" value={{request()->filled('q') ? request()->input("q"): ''}}>
             </div>
 
             <div class="col-auto">
                 <button class="btn btn-primary">Найти</button>
             </div>
+            @if(request()->filled('q'))
+                <a href="{{route('admin.posts.index')}}" class="btn btn-primary">Сбросить поиск</a>
+            @endif
         </form>
 
         <table class="table">

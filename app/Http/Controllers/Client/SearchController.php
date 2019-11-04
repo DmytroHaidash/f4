@@ -12,7 +12,7 @@ class SearchController extends Controller
     {
         $query = $request->input('search');
 
-        $exhibits = Exhibit::whereRaw('LOWER(title) LIKE ?', '%'.mb_strtolower($query).'%')->paginate(12);
+        $exhibits = Exhibit::whereRaw('LOWER(title) LIKE ?', '%'.mb_strtolower($query).'%')->orWhereRaw('LOWER(props) LIKE ?', '%'.mb_strtolower($query).'%')->paginate(12);
 
         return view('client.search.index', [
             'exhibits' => $exhibits,

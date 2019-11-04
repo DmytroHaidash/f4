@@ -102,11 +102,7 @@ class Navigation
                         'name' => __('nav.book'),
                         'link' => url('/book'),
                         'published' => $this->book->published
-                    ],
-                    (object) [
-                        'name' => __('nav.projects'),
-                        'link' => url('/projects')
-                    ],
+                    ]
                 ]
             ],
         ];

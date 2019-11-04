@@ -19,8 +19,14 @@ class PostsController extends Controller
      */
     public function index(): View
     {
+        $posts = Post::query();
+        if (request()->filled('q')) {
+            $q = request()->input('q');
+            $posts->where('title', 'like', "%{$q}%")->orWhere('description', 'like', "%{$q}%")->orWhere('body', 'like', "%{$q}%");
+        }
+
         return view('admin.posts.index', [
-            'posts' => Post::latest()->paginate(20)
+            'posts' => $posts->latest()->paginate(20)
         ]);
     }
 

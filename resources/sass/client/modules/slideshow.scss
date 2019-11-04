@@ -137,3 +137,17 @@
 .slide__link {
   position: relative;
 }
+
+.mobile-top {
+  @apply bg-center bg-cover bg-no-repeat flex justify-center items-center;
+  height: 80vh;
+
+  &__logo {
+    width: 240px;
+    height: 110px;
+  }
+
+  @screen md {
+    display: none;
+  }
+}

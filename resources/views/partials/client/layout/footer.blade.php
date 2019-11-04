@@ -1,9 +1,9 @@
 <footer class="pt-10 pb-4 overflow-hidden">
     <div class="container">
-        <div class="text-center">
+        <div class="text-center logo-decoration inset-x-0 mx-auto">
             <a href="{{ url('/') }}" class="inline-flex">
-                <svg fill="#fff" width="240" height="120">
-                    <use xlink:href="#logo-footer"></use>
+                <svg fill="#fff" width="240" height="80">
+                    <use xlink:href="#logo"></use>
                 </svg>
             </a>
         </div>

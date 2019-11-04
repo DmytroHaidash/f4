@@ -19,9 +19,13 @@ class ExhibitsController extends Controller
      */
     public function index(): View
     {
-        $exhibits = Exhibit::with('sections')->paginate(20);
+        $exhibits = Exhibit::query();
+        if (request()->filled('q')) {
+            $q = request()->input('q');
+            $exhibits->where('title', 'like', "%{$q}%")->orWhere('body', 'like', "%{$q}%")->orWhere('props' , 'like', "%{$q}%");
+        }
 
-        return view('admin.exhibits.index', compact('exhibits'));
+        return view('admin.exhibits.index', ['exhibits' => $exhibits->with('sections')->paginate(20)]);
     }
 
     /**

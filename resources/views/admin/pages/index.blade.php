@@ -3,16 +3,6 @@
 @section('content')
 
     <section>
-        <form class="row mb-4">
-            <div class="col pr-0">
-                <input type="search" name="q" class="form-control" placeholder="Название страницы" value="{{ request('q') }}">
-            </div>
-
-            <div class="col-auto">
-                <button class="btn btn-primary">Найти</button>
-            </div>
-        </form>
-
         <table class="table">
             <thead class="small">
             <tr>

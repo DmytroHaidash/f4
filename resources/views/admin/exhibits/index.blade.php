@@ -5,7 +5,7 @@
     <section>
         <form class="row mb-4">
             <div class="col pr-0">
-                <input type="search" name="q" class="form-control" placeholder="Название экспоната">
+                <input type="search" name="q" class="form-control" placeholder="Название экспоната" value={{request()->filled('q') ? request()->input("q"): ''}}>
             </div>
 
             <div class="col-auto">
@@ -16,7 +16,7 @@
         <table class="table">
             <thead class="small">
             <tr>
-                <th>ID</th>
+                <th>Номер</th>
                 <th width="65%">Название</th>
                 <th width="30%">Секция</th>
                 <th class="text-center">Порядок</th>
@@ -26,7 +26,7 @@
 
             @forelse($exhibits as $exhibit)
                 <tr>
-                    <td>{{ $exhibit->id }}</td>
+                    <td>{{ $exhibit->props['number'] }}</td>
                     <td>
                         <a href="{{ route('admin.exhibits.edit', $exhibit) }}">
                             {{ $exhibit->title }}
