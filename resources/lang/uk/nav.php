@@ -10,5 +10,6 @@ return [
     'exhibitions' => 'Виставки',
     'contacts' => 'Контакти',
     'previous' => 'Попередня',
-    'next' => 'Наступна'
+    'next' => 'Наступна',
+    'catalog' => 'Каталог'
 ];

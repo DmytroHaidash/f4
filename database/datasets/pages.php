@@ -33,5 +33,16 @@ return [
             'ru' => "Книга",
             'en' => 'Book'
         ],
+    ],
+    [
+        'title' => [
+            'ru' => 'Каталог',
+            'en' => 'Catalog'
+        ],
+        'slug' =>'catalog',
+        'body' => [
+            'ru' => "Каталог",
+            'en' => 'Catalog'
+        ],
     ]
 ];

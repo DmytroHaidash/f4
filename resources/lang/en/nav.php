@@ -12,5 +12,6 @@ return [
     'previous' => 'Previous',
     'next' => 'Next',
     'expertise'=> 'Expertise and estimate',
-    'book' => 'Book'
+    'book' => 'Book',
+    'catalog' => 'Catalog'
 ];
