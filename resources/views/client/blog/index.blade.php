@@ -34,3 +34,9 @@
     </section>
 
 @endsection
+
+@section('meta')
+    @foreach($posts as $post)
+        @includeIf('partials.app.layout.meta', ['meta' => $post->meta()->first()])
+    @endforeach
+@endsection

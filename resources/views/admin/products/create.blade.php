@@ -35,6 +35,7 @@
                             </fieldset>
                         @endforeach
                     </block-editor>
+                    @includeIf('partials.admin.meta', ['meta' => null])
                     <multi-uploader class="mt-4"></multi-uploader>
                 </div>
 

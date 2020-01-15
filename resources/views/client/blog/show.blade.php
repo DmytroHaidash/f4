@@ -28,3 +28,7 @@
     </section>
 
 @endsection
+
+@section('meta')
+    @includeIf('partials.app.layout.meta', ['meta' => $post->meta()->first()])
+@endsection

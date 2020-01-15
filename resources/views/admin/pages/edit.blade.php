@@ -53,6 +53,8 @@
                             <label class="custom-control-label" for="published">Опубликовать</label>
                         </div>
                     </div>
+
+                    @includeIf('partials.admin.meta', ['meta' => $page->meta()->first()])
                 </div>
 
                 <div class="col-lg-4">

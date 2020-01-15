@@ -52,6 +52,7 @@
                             </div>
                         @endif
                     </block-editor>
+                    @includeIf('partials.admin.meta', ['meta' => $section->meta()->first()])
                 </div>
 
                 <div class="col-lg-4">

@@ -40,6 +40,7 @@
 
                         @endforeach
                     </block-editor>
+                    @includeIf('partials.admin.meta', ['meta' => $exhibit->meta()->first()])
                 </div>
 
                 <div class="col-lg-4">

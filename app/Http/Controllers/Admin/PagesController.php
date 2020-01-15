@@ -45,6 +45,15 @@ class PagesController extends Controller
                 ->usingFileName(makeFileName($request->file('cover')))
                 ->toMediaCollection('cover');
         }
+        if($request->has('meta')){
+            foreach ($request->get('meta') as $key => $meta) {
+                $page->meta()->updateOrCreate([
+                    'metable_id' => $page->id
+                ], [
+                    $key => $meta
+                ]);
+            }
+        }
 
         return redirect()->route('admin.pages.edit', $page);
     }
@@ -76,6 +85,15 @@ class PagesController extends Controller
             $page->addMediaFromRequest('cover')
                 ->usingFileName(makeFileName($request->file('cover')))
                 ->toMediaCollection('cover');
+        }
+        if($request->has('meta')){
+            foreach ($request->get('meta') as $key => $meta) {
+                $page->meta()->updateOrCreate([
+                    'metable_id' => $page->id
+                ], [
+                    $key => $meta
+                ]);
+            }
         }
 
         return back();

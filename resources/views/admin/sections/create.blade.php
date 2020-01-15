@@ -49,6 +49,7 @@
                             </div>
                         @endif
                     </block-editor>
+                    @includeIf('partials.admin.meta', ['meta' => null])
                 </div>
 
                 <div class="col-lg-4">

@@ -97,4 +97,14 @@
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 @endpush
 
+@section('meta')
+    @includeIf('partials.app.layout.meta', ['meta' => $product->meta()->first()])
+    <meta property="og:type" content="product.item">
+    <meta property="og:image"
+          content="{{ $product->hasMedia('uploads') ? $product->getFirstMedia('uploads')->getFullUrl() : '' }}">
+    <meta property="product:condition" content="new">
+    <meta property="product:availability" content="{{$product->in_stock}}">
+    <meta property="product:price:amount" content="{{ $product->price }}">
+    <meta property="product:price:currency" content="грн">
+@endsection
 

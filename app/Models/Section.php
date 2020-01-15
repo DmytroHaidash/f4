@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Carbon;
 use Spatie\EloquentSortable\Sortable;
 use Spatie\Image\Exceptions\InvalidManipulation;
@@ -94,6 +95,13 @@ class Section extends Model implements HasMedia, Sortable
         return $this->belongsTo(Section::class);
     }
 
+    /**
+     * @return MorphMany
+     */
+    public function meta(): MorphMany
+    {
+        return $this->morphMany(Meta::class, 'metable');
+    }
     /**
      * @return BelongsToMany
      */

@@ -39,6 +39,7 @@
 
                         @endforeach
                     </block-editor>
+                    @includeIf('partials.admin.meta', ['meta' => $post->meta()->first()])
                 </div>
 
                 <div class="col-lg-4">

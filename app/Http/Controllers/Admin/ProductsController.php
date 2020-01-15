@@ -14,7 +14,7 @@ use Spatie\MediaLibrary\Models\Media;
 class ProductsController extends Controller
 {
     /**
-     * @param  Request  $request
+     * @param  Request $request
      * @return View
      */
     public function index(Request $request): View
@@ -51,7 +51,7 @@ class ProductsController extends Controller
     }
 
     /**
-     * @param  Request  $request
+     * @param  Request $request
      * @return RedirectResponse
      */
     public function store(Request $request): RedirectResponse
@@ -66,12 +66,20 @@ class ProductsController extends Controller
         $product->categories()->attach($request->input('categories', []));
 
         $this->handleMedia($request, $product);
-
+        if ($request->has('meta')) {
+            foreach ($request->get('meta') as $key => $meta) {
+                $product->meta()->updateOrCreate([
+                    'metable_id' => $product->id
+                ], [
+                    $key => $meta
+                ]);
+            }
+        }
         return redirect()->route('admin.products.edit', $product);
     }
 
     /**
-     * @param  Product  $product
+     * @param  Product $product
      * @return View
      */
     public function edit(Product $product): View
@@ -83,21 +91,29 @@ class ProductsController extends Controller
     }
 
     /**
-     * @param  Request  $request
-     * @param  Product  $product
+     * @param  Request $request
+     * @param  Product $product
      * @return RedirectResponse
      */
     public function update(Request $request, Product $product): RedirectResponse
     {
         $product->fill([
-        'price' => $request->input('price'),
+            'price' => $request->input('price'),
             'is_published' => $request->has('is_published'),
             'in_stock' => $request->has('in_stock')
-    ]);
+        ]);
         $product->makeTranslation(['title', 'description', 'body'])->save();
         $product->categories()->sync($request->input('categories'));
         $this->handleMedia($request, $product);
-
+        if ($request->has('meta')) {
+            foreach ($request->get('meta') as $key => $meta) {
+                $product->meta()->updateOrCreate([
+                    'metable_id' => $product->id
+                ], [
+                    $key => $meta
+                ]);
+            }
+        }
         return redirect()->route('admin.products.edit', $product);
     }
 
@@ -135,8 +151,8 @@ class ProductsController extends Controller
     }
 
     /**
-     * @param  Request  $request
-     * @param  Product  $product
+     * @param  Request $request
+     * @param  Product $product
      */
     private function handleMedia(Request $request, Product $product): void
     {

@@ -50,7 +50,15 @@ class ExhibitsController extends Controller
         $exhibit->sections()->attach($request->input('section_id'));
 
         $this->handleMedia($request, $exhibit);
-
+        if($request->has('meta')){
+            foreach ($request->get('meta') as $key => $meta) {
+                $exhibit->meta()->updateOrCreate([
+                    'metable_id' => $exhibit->id
+                ], [
+                    $key => $meta
+                ]);
+            }
+        }
         return redirect()->route('admin.exhibits.edit', $exhibit);
     }
 
@@ -78,7 +86,15 @@ class ExhibitsController extends Controller
         $exhibit->sections()->sync($request->input('section_id'));
 
         $this->handleMedia($request, $exhibit);
-
+        if($request->has('meta')){
+            foreach ($request->get('meta') as $key => $meta) {
+                $exhibit->meta()->updateOrCreate([
+                    'metable_id' => $exhibit->id
+                ], [
+                    $key => $meta
+                ]);
+            }
+        }
         return redirect()->route('admin.exhibits.edit', $exhibit);
     }
 
