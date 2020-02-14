@@ -36,7 +36,7 @@ class ProductCategories extends Model implements Sortable
      */
     public function products(): BelongsToMany
     {
-        return $this->belongsToMany(Product::class, 'category_product', 'product_id', 'category_id');
+        return $this->belongsToMany(Product::class, 'category_product', 'category_id', 'product_id');
     }
 
     protected static function boot()
