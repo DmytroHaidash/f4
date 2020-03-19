@@ -12,10 +12,10 @@
                 @endif
             </div>
 
-            <div class="flex -mx-2 mt-3 font-sm">
-                <div class="px-2 w-1/3">{{ $exhibit->props['number'] }}</div>
-                <div class="px-2 w-1/3">{{ $exhibit->props['origin'] }}</div>
-                <div class="px-2 w-1/3">{{ $exhibit->props['time'] }}</div>
+            <div class="flex -mx-2 mt-3 font-sm teaser__title title">
+                <div class="px-2 w-1/3"><span>{{ $exhibit->props['number'] }}</span></div>
+                <div class="px-2 w-1/3"><span>{{ $exhibit->props['origin'] }}</span></div>
+                <div class="px-2 w-1/3"><span>{{ $exhibit->props['time'] }}</span></div>
             </div>
         </div>
     </a>
