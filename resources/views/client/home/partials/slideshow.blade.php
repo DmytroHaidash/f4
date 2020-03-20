@@ -17,7 +17,7 @@
             <figure class="slide__img" style="background-image: url({{ asset('images/background.jpg') }});"></figure>
             <div class="slide__title">
                 <svg fill="#fff" class="slide__title-logo">
-                    <use xlink:href="#logo2"></use>
+                    <use xlink:href="{{app()->getLocale() == 'ru' ? '#logo2_rus' : '#logo2'}}"></use>
                 </svg>
             </div>
             <div class="slide__desc" hidden></div>

@@ -2,7 +2,7 @@
     <div class="logo self-start h-full">
         <a href="{{ url('/') }}" class="block h-full">
             <svg fill="#fff" width="240" height="60">
-                <use xlink:href="#logo"></use>
+                <use xlink:href="{{app()->getLocale() == 'ru' ? '#logo_rus' : '#logo'}}"></use>
             </svg>
         </a>
     </div>
