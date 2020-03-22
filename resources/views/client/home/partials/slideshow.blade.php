@@ -61,6 +61,6 @@
 </section>
 <div class="mobile-top" style="background-image: url({{ asset('images/bg-mobile.jpg') }});">
     <svg fill="#fff" class="mobile-top__logo">
-        <use xlink:href="#logo2"></use>
+        <use xlink:href="{{app()->getLocale() == 'ru' ? '#logo2_rus' : '#logo2'}}"></use>
     </svg>
 </div>
