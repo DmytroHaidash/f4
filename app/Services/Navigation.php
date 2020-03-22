@@ -29,10 +29,10 @@ class Navigation
     public function header()
     {
         return [
-            (object)[
-                'name' => trans('nav.catalog'),
-                'link' => route('client.catalog.index'),
-            ],
+//            (object)[
+//                'name' => trans('nav.catalog'),
+//                'link' => route('client.catalog.index'),
+//            ],
             (object) [
                 'name' => __('nav.about'),
                 'link' => url('/about')
@@ -136,22 +136,22 @@ class Navigation
     public function backend()
     {
         return [
-            new NavItem([
-                'name' => 'Товары',
-                'route' => 'products',
-                'icon' => 'i-gallery',
-            ]),
-            new NavItem([
-                'name' => 'Категории товаров',
-                'route' => 'product_categories',
-                'icon' => 'i-gallery',
-            ]),
-            new NavItem([
-                'name' => 'Заказы',
-                'route' => 'orders',
-                'icon' => 'i-gallery',
-            ]),
-            new Delimiter(),
+//            new NavItem([
+//                'name' => 'Товары',
+//                'route' => 'products',
+//                'icon' => 'i-gallery',
+//            ]),
+//            new NavItem([
+//                'name' => 'Категории товаров',
+//                'route' => 'product_categories',
+//                'icon' => 'i-gallery',
+//            ]),
+//            new NavItem([
+//                'name' => 'Заказы',
+//                'route' => 'orders',
+//                'icon' => 'i-gallery',
+//            ]),
+//            new Delimiter(),
             new NavItem([
                 'name' => 'Экспонаты',
                 'route' => 'exhibits',

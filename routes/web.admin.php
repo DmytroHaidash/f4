@@ -24,9 +24,9 @@ Route::group([
     Route::resource('pages', 'PagesController')->except('show');
     Route::resource('publications', 'PublicationsController')->except('show');
 
-    Route::resource('products', 'ProductsController')->except('show');
-    Route::resource('product_categories', 'ProductCategoriesController')->except('show');
-    Route::resource('orders', 'OrdersController')->except('create', 'destroy');
+//    Route::resource('products', 'ProductsController')->except('show');
+//    Route::resource('product_categories', 'ProductCategoriesController')->except('show');
+//    Route::resource('orders', 'OrdersController')->except('create', 'destroy');
 
     Route::resource('contacts', 'ContactsController')->except('show');
     Route::post('contacts/{contact}/restore', 'ContactsController@restore')->name('contacts.restore');
