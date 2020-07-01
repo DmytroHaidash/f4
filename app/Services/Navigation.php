@@ -63,11 +63,11 @@ class Navigation
                 'name' => __('nav.exhibitions'),
                 'link' => route('client.exhibitions.index')
             ],*/
-            (object) [
+            /*(object) [
                 'name' => __('nav.book'),
                 'link' => url('/book'),
                 'published' => $this->book->published
-            ],
+            ],*/
             (object) [
                 'name' => __('nav.contacts'),
                 'link' => route('client.contacts.index')
@@ -102,11 +102,11 @@ class Navigation
                         'name' => __('nav.contacts'),
                         'link' => route('client.contacts.index')
                     ],
-                    (object) [
+                    /*(object) [
                         'name' => __('nav.book'),
                         'link' => url('/book'),
                         'published' => $this->book->published
-                    ]
+                    ]*/
                 ]
             ],
         ];

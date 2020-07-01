@@ -1,8 +1,10 @@
 @extends('layouts.client', ['page_title' => __('nav.contacts')])
 
 @section('content')
-
-    <section class="mt-32 mb-12 container">
+    @if($page->hasMedia('cover'))
+        <section class="lozad page-header" data-background-image="{{ $page->getFirstMediaUrl('cover') }}"></section>
+    @endif
+    <section class="{{$page->hasMedia('cover')? '-mt-32' : 'mt-32'}} mb-12 container">
         <h1 hidden>{{ __('nav.contacts') }}</h1>
 
         <div class="flex flex-wrap -mx-12 -mb-8">

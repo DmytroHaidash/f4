@@ -3,7 +3,7 @@
         <div class="text-center logo-decoration inset-x-0 mx-auto">
             <a href="{{ url('/') }}" class="inline-flex">
                 <svg fill="#fff" width="240" height="80">
-                    <use xlink:href="#logo"></use>
+                    <use xlink:href="{{app()->getLocale() == 'ru' ? '#logo_rus' : '#logo'}}"></use>
                 </svg>
             </a>
         </div>
