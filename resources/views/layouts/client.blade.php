@@ -7,8 +7,12 @@
 
     <title>{!! config('app.name', 'Impression Admin') . (isset($page_title) ? ' | ' . $page_title : '') !!}</title>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+
     <link rel="stylesheet" href="{{ asset('css/client.css') }}">
     @stack('styles')
+    @yield('meta')
 </head>
 <body>
 @include('partials.client.layout.icons')
