@@ -2,7 +2,7 @@
 
 return [
     'sections' => [
-        'visit' => 'Go to the collection'
+        'visit' => 'Go to collection'
     ],
     'blog' => [
         'all' => 'All articles',
