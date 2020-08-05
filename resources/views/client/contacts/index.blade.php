@@ -18,7 +18,7 @@
 
                         <div class="{{ $contact->hasMedia('cover') ? 'px-2 py-2 mb-0 md:px-4 md:py-4 md:mb-10 bg-purple-900 text-white w-3/4 absolute right-0 bottom-0' : '' }}">
                             <h2 class="text-2xl">{{ $contact->name }}</h2>
-                            <p class="font-serif italic text-lg mb-4">{{ $contact->position }}</p>
+                            <p class="font-serif italic text-lg mb-2">{{ $contact->position }}</p>
 
                             @isset ($contact->contacts['phone'])
                                 <p>
