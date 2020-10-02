@@ -10,6 +10,16 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179509200-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-179509200-1');
+    </script>
+
     <link rel="stylesheet" href="{{ asset('css/client.css') }}">
     @stack('styles')
     @yield('meta')
