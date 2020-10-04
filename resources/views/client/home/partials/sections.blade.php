@@ -1,9 +1,9 @@
 <section>
     @foreach($sections as $section)
-        <h1 class="text-center text-3xl my-12 relative z-20 relative font-heading">
+        <h2 class="text-center text-3xl my-12 relative z-20 relative font-heading">
             <span>{{ $section->title }}</span>
             <div class="title-decoration inset-x-0 mx-auto w-40 h-16"></div>
-        </h1>
+        </h2>
 
         @if ($section->children->count())
             <div class="flex flex-wrap">
