@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    @yield('meta')
     <title>{!! config('app.name', 'Impression Admin') . (isset($page_title) ? ' | ' . $page_title : '') !!}</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/client.css') }}">
     @stack('styles')
-    @yield('meta')
+
 </head>
 <body>
 @include('partials.client.layout.icons')
@@ -31,7 +31,6 @@
     @includeIf('partials.client.layout.header')
     @includeIf('partials.client.layout.mesengers')
     <main class="flex-1">
-
         @yield('content')
     </main>
     @includeIf('partials.client.layout.footer')

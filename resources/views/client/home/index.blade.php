@@ -11,6 +11,6 @@
 
 @section('meta')
     @foreach($sections as $section)
-        @includeIf('partials.app.layout.meta', ['meta' => $section->meta()->first()])
+        @include('partials.client.layout.meta', ['meta' => $section->meta()->first()])
     @endforeach
 @endsection
