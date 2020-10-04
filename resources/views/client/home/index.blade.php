@@ -10,7 +10,8 @@
 @endsection
 
 @section('meta')
+    @includeIf('partials.client.layout.meta', ['meta' => $page->meta()->first()])
     @foreach($sections as $section)
-        @include('partials.client.layout.meta', ['meta' => $section->meta()->first()])
+        @includeIf('partials.client.layout.meta', ['meta' => $section->meta()->first()])
     @endforeach
 @endsection
