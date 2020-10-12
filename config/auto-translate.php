@@ -9,7 +9,7 @@ return [
     /*
      * Here you can specify the target language code(s). This can be a string or an array.
      */
-    'target_language' => ['uk', 'en'],
+    'target_language' => 'en',
 
     /*
      * Specify the path to the translation files.
